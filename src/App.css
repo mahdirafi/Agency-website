@@ -1,3 +1,43 @@
 :root{
   background-color: white;
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+/* animated 2 */
+@keyframes scroll2 {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll2 {
+  animation: scroll2 30s linear infinite;
+}
+
+.animate-scroll2:hover {
+  animation-play-state: paused;
+}
+
+/* @media (prefers-reduced-motion: reduce) {
+  .animate-scroll2 {
+    animation: none;
+  } */
+/* } */
