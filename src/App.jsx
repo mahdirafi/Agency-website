@@ -1,11 +1,20 @@
- import './App.css'
+import { Outlet } from 'react-router'
+import './App.css'
+import Footer from './Components/Footer'
+import Navbar from './Components/Navbar'
+import Home from './Pages/Home'
 
 function App() {
   
 
   return (
-    <div className='bg-white min-h-screen flex items-center justify-center'>
-    <h1 className='font-bold text-2xl text-gray-800 bg-gray-100 shadow-lg rounded-md p-6 '>This is test Text.</h1>
+    <div>
+    <Navbar/>
+    <main>
+      <Home/>
+      <Outlet/>
+    </main>
+    <Footer/>
     </div>
   )
 }

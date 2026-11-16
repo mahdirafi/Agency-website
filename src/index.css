@@ -1,1 +1,8 @@
 @import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --font-sans: "Inter", system-ui, Arial, sans-serif;
+  --color-pri: #0F62FE;
+  --color-colorBG: #F2F4F8;
+}
