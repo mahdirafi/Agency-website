@@ -19,7 +19,6 @@ const Home = () => {
         <Services/>
         <Testimonial/>
         <Blogs/>
-        <teamM/>
         <TeamSection/>
         <Pricing/>
         <FAQs/>

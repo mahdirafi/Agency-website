@@ -59,7 +59,7 @@ const Pricing = () => {
         {/* Toggle label section */}
         <div className="mb-12 flex justify-center sm:mb-16">
           <label className="inline-flex cursor-pointer items-center gap-3 rounded-full border border-[#D0E2FF] bg-white px-4 py-2 shadow-sm">
-            <span className="min-w-[110px] text-sm font-medium text-[#001D6C] sm:min-w-[130px] sm:text-base">
+            <span className="min-w-[110px] text-sm font-medium text-blue-800 sm:min-w-[130px] sm:text-base text-md font-semibold">
               {isYearly ? "Yearly Pricing" : "Monthly pricing"}
             </span>
             {/* toggle button */}

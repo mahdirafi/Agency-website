@@ -1,6 +1,5 @@
- 
 
-const HeadingSection = ({subheading,heading,description}) => {
+ const HeadingSection = ({subheading,heading,description}) => {
     return (
         <div className="text-center mb-12">
            <p className="inline-block text-xs sm:text-sm font-semibold tracking-widest uppercase text-blue-600 bg-blue-50 border border-blue-100 rounded-full px-4 py-1.5 mb-4">
