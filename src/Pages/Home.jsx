@@ -3,6 +3,7 @@ import Blogs from "./blogs/Blogs";
 import CompanyList from "./home/CompanyList";
 import FAQs from "./home/FAQs";
 import Hero from "./home/Hero";
+import Newslatter from "./home/Newslatter";
 import Pricing from "./home/Pricing";
 import Services from "./home/Services";
 import TeamSection from "./home/TeamSection";
@@ -22,6 +23,7 @@ const Home = () => {
         <TeamSection/>
         <Pricing/>
         <FAQs/>
+        <Newslatter/>
         </>
     );
 };

@@ -7,7 +7,7 @@
            </p>
            <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mt-3 md:w-3/5 mx-auto">{heading}</h2>
            {
-            description && <p className="text-gray-600 mt-4">{description}</p>
+            description && <p className="text-gray-600 mt-4 max-w-10/12 mx-auto">{description}</p>
            }
             
         </div>
