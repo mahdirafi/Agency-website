@@ -11,6 +11,8 @@ import Services from './Pages/home/Services.jsx'
 import Login from './Components/Login.jsx'
 import Registration from './Components/Registration.jsx'
 import AuthProvider from './Context/AuthContext.jsx'
+import Dashboard from './Components/Dashboard.jsx'
+import PrivateRoute from './routes/PrivateRoute.jsx'
  
 
 createRoot(document.getElementById('root')).render(
@@ -32,6 +34,9 @@ createRoot(document.getElementById('root')).render(
       {/* Authentication */}
         <Route path="/login" element={<Login/>} />
         <Route path="/registration" element={<Registration/>} />
+
+        {/* dashboard */}
+        <Route path="/dashboard" element={<PrivateRoute><Dashboard/></PrivateRoute>} />
 
 
 

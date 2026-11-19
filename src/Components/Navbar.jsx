@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { useAuth } from "../Context/AuthContext";
+import { LuLogOut } from "react-icons/lu";
  
  
 
@@ -62,8 +63,12 @@ const NavItems = () => (
 
 const Navbar = () => {
 
-  const {user} = useAuth();
+  const {user,logout} = useAuth();
   console.log(user);
+
+  const handleLogout = ()=>{
+    logout();
+  }
 
   
   return (
@@ -135,7 +140,20 @@ const Navbar = () => {
 
         {/* End */}
         <div className="navbar-end gap-2 sm:gap-3">
-          <Link
+          {
+            user ? (<><Link
+            to="/dashboard"
+            className="btn hidden h-10 min-h-0 rounded-full border-2 border-[#0F62FE] bg-transparent px-5 text-sm font-semibold text-[#0F62FE] shadow-none transition-all duration-200 hover:bg-[#0F62FE] hover:text-white sm:flex"
+          >
+            Dashboard
+          </Link>
+          <button
+            onClick={handleLogout}
+            className="btn h-10 min-h-0 gap-2 rounded-full border-0 bg-[#0F62FE] px-4 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:bg-[#0043CE] hover:shadow-lg sm:px-5"
+          >
+            Logout
+            <LuLogOut  className="hidden sm:block" />
+          </button></>): (<><Link
             to="/login"
             className="btn hidden h-10 min-h-0 rounded-full border-2 border-[#0F62FE] bg-transparent px-5 text-sm font-semibold text-[#0F62FE] shadow-none transition-all duration-200 hover:bg-[#0F62FE] hover:text-white sm:flex"
           >
@@ -147,7 +165,8 @@ const Navbar = () => {
           >
             Start Free Trial
             <FaLongArrowAltRight className="hidden sm:block" />
-          </Link>
+          </Link></>)
+          }
         </div>
       </div>
     </header>
