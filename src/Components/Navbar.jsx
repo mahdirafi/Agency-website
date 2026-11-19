@@ -1,5 +1,8 @@
 import { Link, NavLink } from "react-router";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { useAuth } from "../Context/AuthContext";
+ 
+ 
 
 const categories = [
   { name: "Web Design", to: "/service/web-design" },
@@ -26,6 +29,7 @@ const linkClass = ({ isActive }) =>
 
 // One list, used for both mobile and desktop
 const NavItems = () => (
+  
   <>
     {navLinks.map((item) =>
       item.children ? (
@@ -57,6 +61,11 @@ const NavItems = () => (
 );
 
 const Navbar = () => {
+
+  const {user} = useAuth();
+  console.log(user);
+
+  
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 shadow-sm backdrop-blur-md">
       {/* brand accent line */}

@@ -1,15 +1,42 @@
 import { useForm } from "react-hook-form";
 import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
+import { useAuth } from "../Context/AuthContext";
+import { useState } from "react";
+import Swal from "sweetalert2";
 
 const Login = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const {  register,  handleSubmit,  formState: { errors },  } = useForm();
+  const [error , setError] = useState('')
 
-  const onSubmit = (data) => console.log(data);
+  const {signInWithEmail , googleLogin } = useAuth();
+  const navigate = useNavigate()
+
+  const onSubmit = async(data) => {
+    try {
+         await signInWithEmail(data.email , data.password);
+          Swal.fire({
+            title:"Login Successful",
+            icon: "success",
+            draggable: true,
+          });
+         navigate('/')
+         setError("")
+     
+    } catch (error) {
+      console.error("Failed to Login", error.message)
+      setError(error.message ?? "Failed to Login. Please try again!")
+    }
+  }
+  // Google Login
+  const handleGoogleLogin = async () =>{
+    try {
+      await googleLogin();
+      navigate('/')
+    } catch (error) {
+      console.error("Failed to Login in Google!" , error.message)
+    }
+  }
 
 
   return (
@@ -83,6 +110,7 @@ const Login = () => {
             <p className="text-black font-semibold">Or SignIn With</p>
             <div className="flex justify-center items-center my-2 gap-3">
               <button
+                onClick={handleGoogleLogin}
                 type="button"
                 className="flex justify-center items-center gap-2 text-white bg-red-700 px-3 py-2 
                         rounded hover:bg-red-800 cursor-pointer"
