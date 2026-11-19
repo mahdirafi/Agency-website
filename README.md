@@ -10,7 +10,7 @@ A modern, fast, fully responsive agency website built with **React 19**, **Vite*
 [![Firebase](https://img.shields.io/badge/Firebase-13-FFCA28?logo=firebase&logoColor=black)](https://firebase.google.com/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](#-license)
 
-[Live Demo](#) · [Report a Bug](../../issues) · [Request a Feature](../../issues)
+[Live Demo](https://agency-website-bice-pi.vercel.app/) · [Report a Bug](../../issues) · [Request a Feature](../../issues)
 
 </div>
 
@@ -37,7 +37,7 @@ A modern, fast, fully responsive agency website built with **React 19**, **Vite*
 
 **Agency Website** is a single-page application that presents an agency's brand, services, pricing and contact options in a clean, professional interface. It is built as a lightweight React + Vite frontend with client-side routing, form handling and Firebase integration, and is fully responsive across mobile, tablet and desktop screens.
 
-> **Live site:** [Add your deployed URL here](#)
+> **Live site:** [https://agency-website-bice-pi.vercel.app/](#)
 
 ---
 
