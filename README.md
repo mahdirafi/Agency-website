@@ -79,7 +79,7 @@ A modern, fast, fully responsive agency website built with **React 19**, **Vite*
 
 | Home | Services |
 | ---- | -------- |
-| ![Home](./public/screenshots/home.png) | ![Services](./public/screenshots/services.png) |
+| ![Home](![alt text](image.png)) | ![Services](![alt text](image-1.png)) |
 
 ---
 
